@@ -95,7 +95,7 @@ Before starting to refactor the codes, ensure that you have pulled down the late
         cd ansible-config-artifacts
         cd ansible-playbook -i inventory/dev.yml playbooks/site.yaml
     ![wireshackremove](images/wiresrmv.png)
-11. ssh into any of the client servers and confirm if Wireshack has been removed.
+11. SSH into any of the client servers and confirm if Wireshack has been removed.
         ![wireshack](images/wireshack%20conf.png)
 
 ## CONFIGURE UAT WEBSERVERS WITH A ROLE ‘WEBSERVER’
@@ -112,10 +112,10 @@ Before starting to refactor the codes, ensure that you have pulled down the late
 4. In the webserver/task/main.yml and include the configuration that will do the following in the webservers
 
     - Install and configure Apache (httpd service)
-    - Clone Tooling website from GitHub https://github.com/<your-name>/tooling.git.
+    - Clone Tooling website from GitHub <<https://github.com/topgabbie/tooling.git>.
     - Ensure the tooling website code is deployed to /var/www/html on each of 2 UAT Webservers.
     - Make sure httpd service is started.
-5. Find configuration below. 
+5. Find configuration below.
 
           ---
                - name: install apache
@@ -189,7 +189,7 @@ From the refractor branch, commit and push your code to the main branch.
 3. To confirm if our artifact has been copy to the new directory, CD into the ansible-config-artifact and confirm same.
     ![bild](images/roles buid.png)
     ![builds](images/roles%20buid.png)
-4. ssh into the Jenkin-Ansible server,cd into `ansubible-config-artifacts` directory and run the ansible playbook below.
+4. SSH into the Jenkin-Ansible server,cd into `ansubible-config-artifacts` directory and run the ansible playbook below.
 
         ansible-playbook -i inventory/uat.yml playbooks/site.yml
 
@@ -200,4 +200,5 @@ From the refractor branch, commit and push your code to the main branch.
           http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
 
       ![ansibleo/p](images/tooling.png)
- **END**
+
+## END
